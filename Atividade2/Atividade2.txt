@@ -1,0 +1,126 @@
+INTRODUÇÃO
+A segurança da web envolve proteger redes e sistemas de computador contra danos ou roubo de software, hardware ou dados. 
+Isso inclui defender os sistemas de computador contra o direcionamento incorreto ou interrupção dos serviços que eles são projetados para fornecer.
+A segurança da web é sinônimo de segurança cibernética e também abrange a segurança do website, que envolve proteger websites contra ataques. 
+Ela inclui segurança em nuvem e segurança de aplicações web, que defendem serviços em nuvem e aplicativos baseados na web, respectivamente. 
+A tecnologia de proteção de sites permitiu mecanismos de proteção aprimorados, como a proteção de uma rede privada virtual (VPN), 
+que também se enquadra no guarda-chuva de segurança da web.
+A segurança da Web é crucial para a operação tranquila de qualquer empresa que use computadores. 
+Se um site for hackeado ou hackers forem capazes de manipular seus sistemas ou software, seu site, 
+e até mesmo toda a sua rede, pode ser desativado, interrompendo as operações comerciais. 
+As empresas precisam considerar os fatores que entram na segurança da web e na prevenção de ameaças.
+Para cumprir as políticas internas, os critérios impostos pelo governo ou padrões do 
+Projeto aberto de Segurança de aplicações web (Open Web Application Security Project, OWASP), 
+os profissionais de segurança consideram uma variedade de fatores ao estabelecer uma postura de segurança para seu gateway de segurança na web. 
+Manter-se atualizado com os padrões do OWASP ajuda a equipe de segurança a se manter atualizada com as expectativas de segurança da web padrão do setor.
+Além de garantir a conformidade com vários padrões e critérios, a criptografia deve ser mantida atualizada, 
+as ameaças mais recentes no banco de dados de incidentes de hacking da Web (Web hacking incident database, WHID) devem 
+ser monitoradas e as autenticações de usuário devem ser gerenciadas adequadamente. Quando surgem vulnerabilidades, o pessoal de segurança 
+deve instalar os patches mais recentes para resolvê-las. Para proteger os dados, as equipes de desenvolvimento de software precisam 
+implementar protocolos que protejam o código contra roubo durante ou após a gravação.
+
+
+
+
+ITENS E SUBITENS SOBRE O TEMA
+Várias tecnologias estão disponíveis para ajudar as empresas a alcançar a segurança da web, incluindo firewalls de aplicações web (WAFs), 
+scanners de segurança ou vulnerabilidade, ferramentas de quebra de senha, ferramentas de difusão, 
+ferramentas de teste de caixa preta e ferramentas de teste de caixa branca.
+
+-Web Application Firewalls (WAFs)
+Um firewall de aplicações web (WAF) protege aplicações web monitorando e filtrando o tráfego da internet que flui 
+entre um aplicação e a internet. Dessa forma, um WAF funciona como um gateway da web seguro (SWG). 
+Ele fornece proteção para aplicativos da web contra ataques, incluindo script entre sites, inclusão de arquivos, 
+falsificação entre sites, injeção de Linguagem de Consulta Estruturada (SQL) e outras ameaças. 
+No modelo de Interconexão de sistemas abertos (Open systems interconnection, OSI), um WAF funciona dentro da Camada 7. 
+Embora funcione contra muitas ameaças à internet, ele não se destina a se defender contra todos os tipos de ameaças. 
+Um WAF geralmente funciona dentro de um conjunto de ferramentas de proteção destinadas a defender uma rede, computador ou aplicativo.   
+
+-Scanners de segurança ou vulnerabilidade
+Scanners de vulnerabilidades referem-se a ferramentas que as organizações usam para examinar automaticamente seus sistemas, 
+redes e aplicativos para verificar se há pontos fracos em sua segurança. Quando um scanner de vulnerabilidades terminar de verificar o sistema de destino, 
+as equipes de segurança podem usar os resultados para abordar vulnerabilidades críticas.
+
+-Ferramentas de quebra de senha
+Com as ferramentas de quebra de senha, você ainda pode obter acesso ao seu sistema mesmo se tiver perdido ou esquecido sua senha. 
+Isso ajuda a manter a segurança da web para as empresas de algumas maneiras diferentes. 
+Primeiro, se você precisar redefinir sua senha, mas não conseguir se lembrar da senha original, 
+uma ferramenta de quebra de senha permite que você obtenha acesso. Em segundo lugar, se alguém tiver penetrado no seu sistema e alterado a senha, 
+você pode usar uma ferramenta de quebra de senha para voltar e alterar a senha para algo mais difícil de descobrir, recuperando assim o controle.
+
+-Ferramentas de Fuzzing
+Ferramentas de fuzzing são usadas para verificar software, redes ou sistemas operacionais quanto a erros de codificação
+que podem resultar em pontos fracos de segurança. Quando um erro é encontrado, um fuzzer identifica as causas potenciais do problema. 
+Ferramentas de fuzzing também podem ser valiosas em vários estágios do processo de desenvolvimento de software. 
+Seja implementado durante o teste inicial, antes da implantação final ou em algum ponto intermediário, 
+os desenvolvedores podem usá-los para obter informações sobre vulnerabilidades para que possam ser tratadas.
+
+-Ferramentas de teste de caixa preta
+Teste de caixa preta refere-se à verificação de um sistema sem nenhum conhecimento sobre como ele funciona. 
+A única coisa que o testador vê é a entrada que ele digita e a saída resultante. 
+Em muitos aspectos, o testador tem apenas o mesmo conhecimento do sistema que um usuário aleatório teria. 
+As ferramentas de teste de caixa preta são usadas para ver como o sistema responde a ações inesperadas tomadas pelos usuários. 
+Eles podem ajudar o pessoal de segurança a inspecionar os tempos de resposta e detectar problemas no desempenho do software 
+e se o sistema é ou não confiável.
+
+-Ferramentas de teste de caixa branca
+O teste de caixa preta ocorre do ponto de vista do usuário, sem nenhuma visão interna do código em si, 
+enquanto o teste de caixa branca oferece uma visão interna de como o software funciona. 
+Com o teste de caixa branca, o design, codificação e estrutura interna do software são testados para aprimorar seu design, 
+bem como garantir o fluxo tranquilo de dados para dentro e para fora da aplicação. 
+
+
+Ameaças à segurança da web:
+-Injeção de SQL: é uma técnica que um invasor usa para explorar vulnerabilidades no processo de pesquisa de um banco de dados. 
+Com a injeção de SQL, um invasor pode obter acesso a informações privilegiadas, criar permissões de usuário, 
+modificar permissões ou executar planos para alterar, manipular ou destruir dados. Dessa forma, um hacker pode capturar informações confidenciais 
+ou alterá-las para interromper ou controlar o funcionamento de um sistema crucial.
+
+Script entre sites: Cross-site scripting (XSS) refere-se a uma vulnerabilidade que dá aos hackers uma abertura 
+para inserir scripts do lado do cliente dentro de uma página. Isso é usado para obter acesso direto a dados importantes. 
+O XSS também pode ser usado por um hacker para fingir ser outro usuário ou para enganar um usuário para divulgar informações cruciais.
+
+Inclusão de arquivo remoto: Com ela, um invasor faz referência a scripts externos usando vulnerabilidades em um aplicativo da Web. 
+O invasor pode então tentar usar a função de referência dentro de um aplicativo para carregar malware. 
+Esses tipos de malware também são chamados de shells backdoor. Tudo isso é feito a partir de um 
+localizador uniforme de recursos (Uniform resource locator, URL) diferente em um domínio separado.
+
+Violação de senha: Violar a senha de um usuário é uma técnica comum para obter acesso a recursos da web. 
+Em muitos casos, o hacker usará uma senha que o usuário ou administrador usou para fazer login em outro site 
+para o qual o hacker tem uma lista de credenciais de login. Em outros casos, os hackers usam uma técnica chamada pulverização de senha, 
+na qual usam senhas comuns como "12345678" ou "senha123", e experimentam uma após a outra até obterem acesso. 
+Há várias outras técnicas, como keyloggers ou simplesmente encontrar sua senha anotada e usá-la.
+
+Violação de dados: Uma violação de dados refere-se a quando informações confidenciais ou sensíveis são expostas. 
+As violações de dados podem, às vezes, acontecer por acidente, mas muitas vezes são perpetradas por hackers com a intenção de usar ou vender os dados.
+
+Injeção de código: Envolve um invasor usando uma vulnerabilidade de validação de entrada no sistema de software de um computador 
+para introduzir e executar código malicioso. Esse código então prossegue para fazer alterações em como o software e o computador funcionam.
+
+
+
+
+CONCLUSÃO
+A segurança da web é um aspecto essencial no ambiente digital atual, protegendo sistemas, redes e dados contra ameaças e ataques cibernéticos. 
+À medida que a tecnologia evolui, as empresas precisam adotar uma abordagem robusta para garantir a integridade de seus sistemas e informações, 
+utilizando ferramentas como firewalls de aplicações web (WAFs), scanners de vulnerabilidades, e ferramentas de teste como fuzzing e de caixa preta e branca. 
+Essas ferramentas ajudam a identificar e corrigir falhas de segurança, prevenindo invasões e ataques como injeção de SQL, cross-site scripting (XSS), e violações de senha.
+Além disso, as ameaças à segurança da web estão em constante evolução, exigindo que as organizações se mantenham atualizadas com
+as melhores práticas e os últimos padrões de segurança, como os do OWASP. A proteção da web não se limita apenas a softwares de segurança, 
+mas também a um conjunto de políticas e protocolos que envolvem criptografia, autenticação de usuários e monitoramento contínuo. 
+Em um cenário de ameaças constantes, é imprescindível que as empresas adotem medidas proativas para proteger seus sistemas e garantir 
+a continuidade de suas operações, preservando a confiança dos usuários e a integridade dos dados sensíveis. A segurança da web não é uma tarefa única, 
+mas sim uma prática contínua que exige vigilância, atualização e adaptação constante às novas ameaças emergentes.
+
+
+
+
+REFERENCIAS
+FORTINET. O que é segurança web e de sites?. Disponível em: https://www.fortinet.com/br/resources/cyberglossary/what-is-web-security. 
+Acesso em: 19 de fevereiro de 2025.
+
+KASPERSKY. Segurança da Internet: O que é e como se proteger online?. Disponível em: https://www.kaspersky.com.br/resource-center/definitions/what-is-internet-security. 
+Acesso em: 19 de fevereiro de 2025.
+
+HOSTINGER. Segurança Web: o que é e como proteger seu site. Disponível em: https://www.hostinger.com.br/tutoriais/seguranca-web. 
+Acesso em: 19 de fevereiro de 2025.
