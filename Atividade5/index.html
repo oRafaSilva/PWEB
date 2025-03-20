@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        .container {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: gray;
+        }
+ 
+        h2::before {
+            content: "Cinza";
+        }
+ 
+        @media (min-width: 421px) and (max-width: 768px) {
+            .container {
+                background-color: orange;
+            }
+            h2::before {
+                content: "Laranja";
+            }
+        }
+ 
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                background-color: magenta;
+            }
+            h2::before {
+                content: "Rosa";
+            }
+        }
+ 
+        @media (min-width: 1025px) and (max-width: 1080px) {
+            .container {
+                background-color: red;
+            }
+            h2::before {
+                content: "Vermelho";
+            }
+        }
+ 
+        @media (min-width: 1081px) and (max-width: 1366px) {
+            .container {
+                background-color: purple;
+            }
+            h2::before {
+                content: "Roxo";
+            }
+        }
+ 
+        @media (min-width: 1367px) and (max-width: 1920px) {
+            .container {
+                background-color: yellow;
+            }
+            h2::before {
+                content: "Amarelo";
+            }
+        }
+
+        @media (min-width: 1921px) {
+            .container {
+                background-color: green;
+            }
+            h2::before {
+                content: "Verde";
+            }
+        }
+ 
+    </style>
+</head>
+
+<body>
+ 
+    <div class="container">
+        <h2></h2>
+    </div>
+ 
+</body>
+
+</html>
