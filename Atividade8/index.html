@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Questionário de Cinema</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1>Questionário - Opinião sobre o Filme</h1>
+
+    <div id="formulario">
+        <p>Informe sua idade:</p>
+        <input type="number" id="inputIdade" required>
+
+        <p>Informe seu sexo:</p>
+        <select id="inputSexo" required>
+            <option value="">Escolher</option>
+            <option value="F">Feminino</option>
+            <option value="M">Masculino</option>
+            <option value="O">Outro</option>
+        </select>
+
+        <p>O que achou do filme?</p>
+        <select id="inputOpiniao" required>
+            <option value="">Escolher</option>
+            <option value="4">Ótimo</option>
+            <option value="3">Bom</option>
+            <option value="2">Regular</option>
+            <option value="1">Péssimo</option>
+        </select>
+
+        <br><br>
+        <button onclick="registrar()">Registrar Resposta</button>
+    </div>
+
+    <h3 id="status"></h3>
+
+    <h2>Relatório Final</h2>
+    <div id="relatorio"></div>
+
+    <button id="reiniciar" onclick="resetar()" style="display:none;">Iniciar Nova Pesquisa</button>
+</body>
+
+</html>
