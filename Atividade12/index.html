@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade 12</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      padding: 40px;
+      margin: 0;
+    }
+
+    h2,
+    h3 {
+      color: #1f2937;
+      text-align: center;
+    }
+
+    section {
+      background: #ffffff;
+      padding: 30px;
+      margin: 30px auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      max-width: 600px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #374151;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px 14px;
+      font-size: 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+
+    button {
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #2563eb;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #111827;
+      background: #fefce8;
+      border: 1px solid #facc15;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Atividade 12</h2>
+
+  <section>
+    <h3>1. Calcular Área do Retângulo</h3>
+    <label for="base">Base:</label>
+    <input type="number" id="base" placeholder="Digite a base" />
+
+    <label for="altura">Altura:</label>
+    <input type="number" id="altura" placeholder="Digite a altura" />
+
+    <button onclick="calcularAreaRetangulo()">Calcular Área</button>
+    <div class="resultado" id="resultadoArea"></div>
+  </section>
+
+  <section>
+    <h3>2. Criar Conta Corrente</h3>
+    <input placeholder="Nome do Correntista" id="nomeC1" />
+    <input placeholder="Banco" id="bancoC1" />
+    <input placeholder="Número da Conta" id="numContaC1" />
+    <input placeholder="Saldo" type="number" id="saldoC1" />
+    <input placeholder="Saldo Especial" type="number" id="especialC1" />
+  </section>
+
+  <section>
+    <h3>3. Criar Conta Poupança</h3>
+    <input placeholder="Nome do Correntista" id="nomeC2" />
+    <input placeholder="Banco" id="bancoC2" />
+    <input placeholder="Número da Conta" id="numContaC2" />
+    <input placeholder="Saldo" type="number" id="saldoC2" />
+    <input placeholder="Juros (%)" type="number" id="jurosC2" />
+    <input placeholder="Data de Vencimento" type="date" id="vencC2" />
+
+    <button onclick="criarContas()">Mostrar Dados das Contas</button>
+    <div class="resultado" id="resContas"></div>
+  </section>
+
+  <script>
+    function Retangulo(base, altura) {
+      this.base = base;
+      this.altura = altura;
+      this.calcularArea = function () {
+        return this.base * this.altura;
+      };
+    }
+
+    function calcularAreaRetangulo() {
+      const base = parseFloat(document.getElementById('base').value);
+      const altura = parseFloat(document.getElementById('altura').value);
+      if (isNaN(base) || isNaN(altura)) {
+        document.getElementById('resultadoArea').textContent = "Preencha todos os valores corretamente.";
+        return;
+      }
+      const ret = new Retangulo(base, altura);
+      document.getElementById('resultadoArea').textContent = "Área do Retângulo: " + ret.calcularArea();
+    }
+
+    class Conta {
+      constructor(nome, banco, numero, saldo) {
+        this._nome = nome;
+        this._banco = banco;
+        this._numero = numero;
+        this._saldo = saldo;
+      }
+
+      get nome() { return this._nome; }
+      set nome(v) { this._nome = v; }
+
+      get banco() { return this._banco; }
+      set banco(v) { this._banco = v; }
+
+      get numero() { return this._numero; }
+      set numero(v) { this._numero = v; }
+
+      get saldo() { return this._saldo; }
+      set saldo(v) { this._saldo = v; }
+    }
+
+    class Corrente extends Conta {
+      constructor(nome, banco, numero, saldo, saldoEspecial) {
+        super(nome, banco, numero, saldo);
+        this._saldoEspecial = saldoEspecial;
+      }
+
+      get saldoEspecial() { return this._saldoEspecial; }
+      set saldoEspecial(v) { this._saldoEspecial = v; }
+    }
+
+    class Poupanca extends Conta {
+      constructor(nome, banco, numero, saldo, juros, vencimento) {
+        super(nome, banco, numero, saldo);
+        this._juros = juros;
+        this._vencimento = vencimento;
+      }
+
+      get juros() { return this._juros; }
+      set juros(v) { this._juros = v; }
+
+      get vencimento() { return this._vencimento; }
+      set vencimento(v) { this._vencimento = v; }
+    }
+
+    function criarContas() {
+      const corrente = new Corrente(
+        document.getElementById('nomeC1').value,
+        document.getElementById('bancoC1').value,
+        document.getElementById('numContaC1').value,
+        parseFloat(document.getElementById('saldoC1').value),
+        parseFloat(document.getElementById('especialC1').value)
+      );
+
+      const poupanca = new Poupanca(
+        document.getElementById('nomeC2').value,
+        document.getElementById('bancoC2').value,
+        document.getElementById('numContaC2').value,
+        parseFloat(document.getElementById('saldoC2').value),
+        parseFloat(document.getElementById('jurosC2').value),
+        document.getElementById('vencC2').value
+      );
+
+      document.getElementById('resContas').innerHTML = `
+<p><strong>Conta Corrente:</strong><br>
+      Nome: ${corrente.nome}, Banco: ${corrente.banco}, Nº: ${corrente.numero}, Saldo: R$${corrente.saldo}, Saldo Especial: R$${corrente.saldoEspecial}</p>
+<p><strong>Conta Poupança:</strong><br>
+      Nome: ${poupanca.nome}, Banco: ${poupanca.banco}, Nº: ${poupanca.numero}, Saldo: R$${poupanca.saldo}, Juros: ${poupanca.juros}%, Vencimento: ${poupanca.vencimento}</p>
+    `;
+    }
+  </script>
+
+</body>
+
+</html>
