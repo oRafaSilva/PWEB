@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 14</title>
+    <script>
+        function transformarTexto() {
+            var nome = document.forms.formulario1.idNome;
+
+            if (document.forms.formulario1.tipoTexto[0].checked) {
+                nome.value = nome.value.toUpperCase();
+            } else if (document.forms.formulario1.tipoTexto[1].checked) {
+                nome.value = nome.value.toLowerCase();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="formulario1">
+        Nome:
+        <input type="text" name="idNome" size="50">
+        <br><br>
+
+        <input type="radio" name="tipoTexto" onclick="transformarTexto()"> MAIÚSCULAS
+        <input type="radio" name="tipoTexto" onclick="transformarTexto()"> minúsculas
+
+    </form>
+</body>
+
+</html>

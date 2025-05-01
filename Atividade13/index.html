@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 13</title>
+    <script>
+        function atualizarEstado(estado) {
+            var imagem = document.getElementById("janela");
+            var titulo = document.getElementById("titulo");
+
+            if (estado === "aberta") {
+                imagem.src = "janela_aberta.jpg";
+                titulo.innerHTML = "Janela aberta";
+            } else if (estado === "fechada") {
+                imagem.src = "janela_fechada.jpg";
+                titulo.innerHTML = "Janela fechada";
+            } else if (estado === "quebrada") {
+                imagem.src = "janela_quebrada.jpg";
+                titulo.innerHTML = "Janela quebrada";
+            }
+        }
+    </script>
+    <style>
+        img {
+            width: 600px;  
+            height: 500px; 
+            object-fit: cover; 
+        }
+    </style>
+</head>
+<body onload="atualizarEstado('fechada')">
+    <h1 id="titulo">Atividade 13</h1>
+    <img id="janela" 
+         src="janela_fechada.jpg" 
+         alt="Janela Fechada" 
+         onmouseover="atualizarEstado('aberta')" 
+         onmouseout="atualizarEstado('fechada')" 
+         onclick="atualizarEstado('quebrada')" />
+</body>
+</html>
