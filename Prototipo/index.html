@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Final</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="top-filmes">
+        <header>
+            <h2>Meus Assistidos</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Adicionar Filme</a></li>
+                    <li><a href="#">Remover Filme</a></li>
+                    <li><a href="#">Filtrar</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <button class="btn-left" onclick="scrollEsquerda()">❮</button>
+        <div class="carrossel" id="carrossel">
+
+            <div class="filme">
+                <img src="Imagens/ilhadomedo.jpg" alt="Ilha do Medo">
+                <div class="info">
+                    <span class="nota">⭐ 8,7</span>
+                    <h3>1. Ilha do Medo</h3>
+                    <button onclick="abrirModal()">Informações</button>
+                    <button><a href="https://www.youtube.com/watch?v=gL4rP2prdfg" target="_blank">▶ Trailer</a></button>
+                </div>
+            </div>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="fecharModal()">&times;</span>
+                    <img src="Imagens/ilhadomedo.jpg" alt="Ilha do Medo">
+                    <div class="info">
+                        <h2>Ilha do Medo</h2>
+                        <p><strong>Adicionado em:</strong> 22/05/2025</p>
+                        <p><strong>Ano:</strong> 2010</p>
+                        <p><strong>Duração:</strong> 2h 18min</p>
+                        <p><strong>Gêneros:</strong> Thriller/Mistério</p>
+                        <p><strong>Classificação:</strong> 16 anos</p>
+                        <p><strong>Nota:</strong> ⭐ 8,7</p>
+                        <br>
+                        <p>Nos anos 1950, a fuga de uma assassina leva o detetive Teddy Daniels e seu parceiro a
+                            investigarem o seu desaparecimento de um quarto
+                            trancado em um hospital psiquiátrico. Lá, uma rebelião se inicia e o agente terá que
+                            enfrentar seus próprios medos.</p>
+                        <br>
+                        <p><strong>Direção:</strong> Martin Scorsese</p>
+                        <p><strong>Elenco:</strong> Leonardo DiCaprio, Mark Ruffalo, Ben Kinsglay</p>
+                        <div class="streaming">
+                            <p><strong>Disponível em:</strong></p>
+                            <img src="Imagens/primelogo.png" alt="Prime Video">
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="filme">
+                <img src="Imagens/greenbook.jpg" alt="Green Book">
+                <div class="info">
+                    <span class="nota">⭐ 9,7</span>
+                    <h3>2. Green Book</h3>
+                    <button>Informações</button>
+                    <button><a href="https://www.youtube.com/watch?v=QkZxoko_HC0" target="_blank">▶ Trailer</a></button>
+                </div>
+            </div>
+            <!-- <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="fecharModal()">&times;</span>
+                    <img src="Imagens/greenbook.png" alt="Green Book">
+                    <div class="info">
+                        <h2>Green Book</h2>
+                        <p><strong>Adicionado em:</strong> 22/05/2025</p>
+                        <p><strong>Ano:</strong> 2018</p>
+                        <p><strong>Duração:</strong> 2h 10min</p>
+                        <p><strong>Gêneros:</strong> Comédia/Drama</p>
+                        <p><strong>Classificação:</strong> 12 anos</p>
+                        <p><strong>Nota:</strong> ⭐ 9,7</p>
+                        <br>
+                        <p>Dr. Don Shirley é um pianista afro-americano de renome mundial, prestes a embarcar em uma turnê pelo sul dos Estados Unidos, em 1962. 
+                        Como precisa de um motorista e guarda-costas, Shirley recruta Tony Lip, um ítalo-americano fanfarrão do Bronx. 
+                        Apesar de suas diferenças, os dois homens desenvolvem uma ligação inesperada ao enfrentar o racismo e os perigos de uma era de segregação racial.
+                        </p>
+                        <br>
+                        <p><strong>Direção:</strong> Peter Farrelly</p>
+                        <p><strong>Elenco:</strong> Viggo Mortensen, Mahershala Ali, Linda Cardellini</p>
+                        <div class="streaming">
+                            <p><strong>Disponível em:</strong></p>
+                            <img src="Imagens/primelogo.png" alt="Prime Video">
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div> -->
+
+            <div class="filme">
+                <img src="Imagens/duna.jpg" alt="Duna">
+                <div class="info">
+                    <span class="nota">⭐ 9,8</span>
+                    <h3>3. Duna</h3>
+                    <button>Informações</button>
+                    <button><a href="https://www.youtube.com/watch?v=hfLkFZWFmLM" target="_blank">▶ Trailer</a></button>
+                </div>
+            </div>
+
+            <div class="filme">
+                <img src="Imagens/interestelar.jpg" alt="Interestelar">
+                <div class="info">
+                    <span class="nota">⭐ 9,3</span>
+                    <h3>4. Interestelar</h3>
+                    <button>Informações</button>
+                    <button><a href="https://www.youtube.com/watch?v=i6avfCqKcQo" target="_blank">▶ Trailer</a></button>
+                </div>
+            </div>
+
+            <div class="filme">
+                <img src="Imagens/batman.jpg" alt="The Batman">
+                <div class="info">
+                    <span class="nota">⭐ 9,8</span>
+                    <h3>5. The Batman</h3>
+                    <button>Informações</button>
+                    <button><a href="https://www.youtube.com/watch?v=mqqft2x_Aa4" target="_blank">▶ Trailer</a></button>
+                </div>
+            </div>
+
+            <div class="filme">
+                <img src="Imagens/yourname.jpg" alt="Your Name">
+                <div class="info">
+                    <span class="nota">⭐ 9,0</span>
+                    <h3>6. Your Name</h3>
+                    <button>Informações</button>
+                    <button><a href="https://www.youtube.com/watch?v=soQXM3XVvIU" target="_blank">▶ Trailer</a></button>
+                </div>
+            </div>
+
+            <div class="filme">
+                <img src="Imagens/diariodeumapaixao.jpg" alt="Diário de Uma Paixão">
+                <div class="info">
+                    <span class="nota">⭐ 10,0</span>
+                    <h3>7. Diário de Uma Paixão</h3>
+                    <button>Informações</button>
+                    <button><a href="https://www.youtube.com/watch?v=DyfWPxB1pZM" target="_blank">▶ Trailer</a></button>
+                </div>
+            </div>
+
+        </div>
+        <button class="btn-right" onclick="scrollDireita()">❯</button>
+    </section>
+    <script src="index.js"></script>
+
+    <footer>
+        <section class="info-footer">
+            Todos os direitos reservados <br>
+            &copy; Rafael - @orafael_s <br>
+            https://github.com/oRafaSilva <br>
+        </section>
+    </footer>
+</body>
+
+</html>
