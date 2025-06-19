@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Final</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎬 CineCatalog 🎬</h1>
+    </header>
+
+    <main class="content-wrapper"></main>
+    <!-- Navegação entre Abas -->
+    <nav class="abas">
+        <button class="abasButton" onclick="abrirAba('aba-assistidos')">Meus Assistidos</button>
+        <button class="abasButton" onclick="abrirAba('aba-buscar')">Buscar Filme</button>
+    </nav>
+
+    <!-- Aba: Meus Assistidos -->
+    <section id="aba-assistidos" class="aba-conteudo ativa">
+        <section class="top-filmes">
+            <div class="carrossel" id="carrossel">
+                <div class="carousel-container">
+                    <div class="search-carousel-container">
+                        <input type="text" id="buscaCarrosselInput" placeholder="Pesquisar no meu carrossel...">
+                        <button id="buscarCarrosselBtn">Buscar no Carrossel</button>
+                        <button onclick="renderizarCarrosselPessoal()"
+                            style="background-color: #4CAF50; margin-left: 5px;">Limpar Busca</button>
+                    </div>
+
+                    <div id="my-carousel" class="carousel-items">
+                        <p style="color: #ccc; text-align: center; width: 100%;">Nenhum filme adicionado ainda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button class="btn-left" onclick="scrollEsquerda()">❮</button>
+        <button class="btn-right" onclick="scrollDireita()">❯</button>
+    </section>
+
+    <!-- Aba: Buscar Filme -->
+    <section id="aba-buscar" class="aba-conteudo">
+        <div class="busca-filme" style="text-align: center; margin-bottom: 20px;">
+            <input type="text" id="buscaInput" placeholder="Buscar filme por nome...">
+            <button onclick="buscarFilme()">Buscar</button>
+        </div>
+        <div id="resultadosBusca"></div>
+    </section>
+
+    <div id="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="fecharModal()">×</span>
+            <div class="modal-image">
+                <img src="" alt="Poster do Filme">
+            </div>
+            <div class="modal-info">
+                <h2></h2>
+                <div class="info"> </div>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <script src="index.js"></script>
+
+    <footer>
+        <section class="info-footer" style="text-align: center; margin-top: 40px;">
+            Todos os direitos reservados <br>
+            &copy; Rafael - @orafael_s <br>
+            <a href="https://github.com/oRafaSilva" target="_blank">https://github.com/oRafaSilva</a>
+        </section>
+    </footer>
+</body>
+
+</html>
